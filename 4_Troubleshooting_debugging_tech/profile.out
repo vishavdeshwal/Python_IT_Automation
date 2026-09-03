@@ -1,0 +1,55 @@
+# callgrind format
+version: 1
+creator: pprofile
+event: usphit :microseconds/hit
+events: hits microseconds usphit
+cmd: ./testing.py '2025-06-15|Example|test1,test2,test3,test4,test5,test6,test7,test8,test9'
+fl=./testing.py
+fn=<module>:1
+0 1 14 14
+2 1 13 13
+4 1 7 7
+11 1 5 5
+18 1 2 2
+23 1 5 5
+30 1 3 3
+31 1 15 15
+cfl=./testing.py
+cfn=main:23
+calls=1 23
+31 1 100038 100038
+fn=task_one:4
+4 1 2 2
+6 1 1 1
+7 10001 12162 1
+8 10000 12468 1
+9 1 3 3
+fn=task_two:11
+11 1 5 5
+13 1 2 2
+14 5001 6028 1
+15 5000 6604 1
+16 1 2 2
+fn=task_three:18
+18 1 4 4
+20 6 36 6
+21 5 62580 12516
+fn=main:23
+23 1 5 5
+24 1 25 25
+25 1 26 26
+cfl=./testing.py
+cfn=task_one:4
+calls=1 4
+25 1 24638 24638
+26 1 17 17
+cfl=./testing.py
+cfn=task_two:11
+calls=1 11
+26 1 12643 12643
+27 1 30 30
+cfl=./testing.py
+cfn=task_three:18
+calls=1 18
+27 1 62621 62621
+28 1 29 29

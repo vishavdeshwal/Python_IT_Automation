@@ -1,0 +1,4 @@
+Configuration Management :---> OS, config file, Application, Networking, etc.
+PUPPET = Current industry standard for managing the configuration of computers in a fleet of machines. (Open source)
+
+Fact = Variables that represent the characteristics of the system.

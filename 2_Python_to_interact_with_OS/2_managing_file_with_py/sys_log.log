@@ -1,0 +1,52 @@
+Apr 30 04:12:01 server1 CRON[12345]: (alice) CMD (/home/alice/scripts/backup.sh)
+Apr 30 04:12:01 server1 CRON[12345]: (alice) END (backup.sh completed successfully)
+Apr 30 04:15:33 server1 sshd[12356]: Accepted password for bob from 192.168.1.12 port 53241 ssh2
+Apr 30 04:15:33 server1 sshd[12356]: pam_unix(sshd:session): session opened for user bob by (uid=0)
+Apr 30 04:16:07 server1 systemd[1]: Started Session 8 of user bob.
+Apr 30 04:17:55 server1 sudo[12370]:   bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/bin/apt update
+Apr 30 04:18:03 server1 sudo[12370]: pam_unix(sudo:session): session opened for user root by bob(uid=0)
+Apr 30 04:20:10 server1 kernel: [134576.887231] audit: type=1101 audit(1714450810.129:202): user pid=12400 uid=0 auid=1001 ses=12 msg='op=PAM:accounting grantors=pam_unix acct="charlie" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+Apr 30 04:20:10 server1 CRON[12400]: (charlie) CMD (/home/charlie/cleanup.sh)
+Apr 30 04:20:12 server1 CRON[12400]: (charlie) ERROR (cleanup.sh failed with exit status 1)
+Apr 30 04:22:54 server1 systemd[1]: Starting Daily apt download activities...
+Apr 30 04:22:55 server1 systemd[1]: apt-daily.timer: Adding 3h 12min 0.655s random time.
+Apr 30 04:23:10 server1 systemd[1]: Finished Daily apt download activities.
+Apr 30 04:25:33 server1 sshd[12499]: Connection closed by 192.168.1.13 port 52300
+Apr 30 04:27:10 server1 systemd-logind[723]: New session 11 of user alice.
+Apr 30 04:27:11 server1 gdm-password][12532]: pam_unix(gdm-password:session): session opened for user alice by (uid=0)
+Apr 30 04:29:00 server1 kernel: [134599.231121] usb 1-1: new high-speed USB device number 5 using xhci_hcd
+Apr 30 04:30:01 server1 CRON[12598]: (bob) CMD (/home/bob/rotate_logs.sh)
+Apr 30 04:30:01 server1 CRON[12598]: (bob) END (rotate_logs.sh completed successfully)
+Apr 30 04:31:20 server1 sshd[12612]: Failed password for invalid user rootadmin from 192.168.1.15 port 52455 ssh2
+Apr 30 04:31:22 server1 sshd[12612]: Connection closed by authenticating user rootadmin 192.168.1.15 port 52455
+Apr 30 04:35:45 server1 sudo[12680]:   alice : TTY=pts/2 ; PWD=/home/alice ; USER=root ; COMMAND=/bin/systemctl restart nginx
+Apr 30 04:35:45 server1 sudo[12680]: pam_unix(sudo:session): session opened for user root by alice(uid=0)
+Apr 30 04:35:47 server1 systemd[1]: Restarted A high performance web server and a reverse proxy server.
+Apr 30 04:40:01 server1 CRON[12721]: (root) CMD (/usr/bin/python3 /opt/scripts/check_disk.py)
+Apr 30 04:40:02 server1 CRON[12721]: (root) END (check_disk.py ran successfully)
+Apr 30 04:41:30 server1 sshd[12750]: Accepted publickey for charlie from 10.0.0.5 port 56001 ssh2: RSA SHA256:...
+Apr 30 04:42:01 server1 CRON[12780]: (charlie) CMD (/usr/bin/python3 /home/charlie/fetch_logs.py)
+Apr 30 04:42:04 server1 CRON[12780]: (charlie) ERROR (fetch_logs.py failed: IOError)
+Apr 30 04:43:10 server1 systemd[1]: Started Session 13 of user charlie.
+Apr 30 04:44:20 server1 kernel: [134640.321412] eth0: renamed from veth0
+Apr 30 04:45:01 server1 CRON[12845]: (alice) CMD (/home/alice/scripts/update_db.sh)
+Apr 30 04:45:03 server1 CRON[12845]: (alice) END (update_db.sh completed successfully)
+Apr 30 04:47:10 server1 sudo[12878]:   charlie : TTY=pts/3 ; PWD=/home/charlie ; USER=root ; COMMAND=/usr/bin/systemctl reload apache2
+Apr 30 04:47:12 server1 systemd[1]: Reloaded The Apache HTTP Server.
+Apr 30 04:49:00 server1 sshd[12910]: Accepted password for alice from 192.168.1.19 port 51110 ssh2
+Apr 30 04:49:01 server1 sshd[12910]: pam_unix(sshd:session): session opened for user alice by (uid=0)
+Apr 30 04:50:01 server1 CRON[12944]: (bob) CMD (/home/bob/scripts/analyze_data.sh)
+Apr 30 04:50:04 server1 CRON[12944]: (bob) ERROR (analyze_data.sh exited with code 2)
+Apr 30 04:51:30 server1 systemd[1]: Started Cleanup of Temporary Directories.
+Apr 30 04:55:01 server1 CRON[13001]: (root) CMD (/usr/local/bin/daily_check.sh)
+Apr 30 04:55:03 server1 CRON[13001]: (root) END (daily_check.sh completed successfully)
+Apr 30 04:58:00 server1 kernel: [134699.882312] CPU0: Core temperature above threshold, cpu clock throttled
+Apr 30 04:58:00 server1 kernel: [134699.882313] CPU0: Package temperature above threshold, cpu clock throttled
+Apr 30 04:59:01 server1 CRON[13078]: (charlie) CMD (/home/charlie/update_repos.sh)
+Apr 30 04:59:03 server1 CRON[13078]: (charlie) END (update_repos.sh completed successfully)
+Apr 30 05:00:10 server1 sshd[13110]: Disconnected from user bob 192.168.1.12 port 53241
+Apr 30 05:01:33 server1 sudo[13132]:   bob : TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/sbin/reboot
+Apr 30 05:01:33 server1 sudo[13132]: pam_unix(sudo:session): session opened for user root by bob(uid=0)
+Apr 30 05:01:35 server1 systemd[1]: Reached target Reboot.
+Apr 30 05:01:35 server1 systemd[1]: Shutting down.
+

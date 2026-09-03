@@ -1,0 +1,32 @@
+May  4 10:02:15 server systemd[1]: Started Session 42 of user root.
+May  4 10:02:16 server CRON[1101]: (root) CMD (/usr/local/bin/backup.sh)
+May  4 10:02:16 server CRON[1101]: (root) ERROR: backup.sh: No such file or directory
+
+May  4 10:03:40 server kernel: [  512.334001] usb 2-1: new full-speed USB device number 4 using xhci_hcd
+May  4 10:03:41 server kernel: [  512.834001] usb 2-1: New USB device found, idVendor=0bda, idProduct=5411
+May  4 10:03:41 server kernel: [  512.834002] usb 2-1: Manufacturer: Realtek
+
+May  4 10:04:05 server sshd[1143]: Accepted password for admin from 192.168.1.5 port 55222 ssh2
+May  4 10:04:05 server sshd[1143]: pam_unix(sshd:session): session opened for user admin by (uid=0)
+
+May  4 10:04:59 server CRON[1151]: (daemon) CMD (/opt/scripts/rotate_logs.sh)
+May  4 10:04:59 server CRON[1151]: (daemon) ERROR: rotate_logs.sh: Permission denied
+
+May  4 10:06:10 server systemd[1]: Starting Daily Cleanup...
+May  4 10:06:11 server systemd[1]: Finished Daily Cleanup.
+
+May  4 10:07:45 server CRON[1168]: (root) CMD (/usr/bin/cleanup_tmp.sh)
+May  4 10:07:45 server CRON[1168]: (root) ERROR: cleanup_tmp.sh: line 42: syntax error near unexpected token `fi'
+
+May  4 10:08:55 server NetworkManager[802]: <info>  [1651662535.0012] device (eth0): carrier changed: true
+May  4 10:08:56 server NetworkManager[802]: <info>  [1651662536.1045] device (eth0): DHCPv4 state changed: bound
+
+May  4 10:09:21 server gdm-password][1182]: pam_unix(gdm-password:auth): authentication failure; user=guest
+May  4 10:09:23 server gdm-password][1182]: FAILED LOGIN 1 from :0 for guest, Authentication failure
+
+May  4 10:10:33 server CRON[1203]: (nobody) CMD (/home/nobody/script.sh)
+May  4 10:10:33 server CRON[1203]: (nobody) ERROR: script.sh: Segmentation fault (core dumped)
+
+May  4 10:11:05 server kernel: [  688.100293] audit: type=1101 audit(1651662665.001:102): ...
+May  4 10:11:06 server sudo[1210]:   user1 : TTY=pts/1 ; PWD=/home/user1 ; USER=root ; COMMAND=/bin/systemctl restart nginx
+
