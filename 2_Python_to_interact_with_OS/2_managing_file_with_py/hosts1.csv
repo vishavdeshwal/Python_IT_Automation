@@ -1,0 +1,5 @@
+workstation.local,192.18.25.46
+webserver.cloud,10.2.5.6
+database-primary.internal,10.0.1.10
+cache-redis-01.internal,10.0.2.15
+api-gateway-01.prod,172.16.0.5
